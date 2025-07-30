@@ -19,7 +19,7 @@ app.autodiscover_tasks()
 
 app.conf.beat_schedule = {
     "deactivate-inactive-users-every-minute": {
-        "task": "config.tasks.deactivate_inactive_users",
+        "task": "habits.tasks.deactivate_inactive_users",
         "schedule": crontab(minute="*"),
     },
 }

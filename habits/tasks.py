@@ -39,3 +39,8 @@ def send_test_message(chat_id):
         print(f"[Telegram response] Body: {response.text}")
     except Exception as e:
         print(f"[Telegram ERROR]: {e}")
+
+
+@shared_task
+def deactivate_inactive_users():
+    print("Деактивация неактивных пользователей")
